@@ -1,0 +1,7 @@
+<h1>Recent Responses</h1>
+
+<ul>
+    {{#each .}}
+        <li>{{ flagIconLink country~}}&nbsp;From <strong>{{ country~}}</strong>&nbsp;on  {{ dateTime visitdate }}</li>
+    {{/each}}
+</ul>

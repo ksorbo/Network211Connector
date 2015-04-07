@@ -1,0 +1,76 @@
+<div class="center">
+    <div class="bignumber">
+        {{ total }}
+    </div>
+    <p class="visitors">Visitors on All Sites</p>
+</div>
+<a href="#" onclick="refreshLiveStats()" data-role="button">Refresh</a>
+<div data-role="collapsible-set">
+<div data-role="collapsible" class="ui-collapsible ui-collapsible-inset ui-collapsible-collapsed">
+    <h3>Countries Visitors are From</h3>
+
+    <div class="datagrid">
+        <table>
+            <thead>
+            <tr>
+                <th>Country</th>
+                <th>Visitors</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each countries }}
+                <tr>
+                    <td>{{ flagIconLink @key }}&nbsp;{{@key}}</td>
+                    <td align="right">{{this}}</td>
+                </tr>
+            {{/each}}
+            </tbody>
+
+        </table>
+
+    </div>
+</div>
+<div data-role="collapsible" class="ui-collapsible ui-collapsible-inset ui-collapsible-collapsed">
+    <h3>Websites Being Visited</h3>
+    <div class="datagrid">
+        <table>
+            <thead>
+            <tr>
+                <th>Website</th>
+                <th>Visitors</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each sites }}
+                <tr>
+                    <td>{{@key}}</td>
+                    <td align="right" valign="top">{{this}}</td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+<div data-role="collapsible" class="ui-collapsible ui-collapsible-inset ui-collapsible-collapsed">
+    <h3>Pages Being Viewed</h3>
+
+    <div class="datagrid">
+        <table>
+            <thead>
+            <tr>
+                <th>Pages</th>
+                <th>Visitors</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each pages }}
+                <tr>
+                    <td>{{@key}}</td>
+                    <td align="right">{{this}}</td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
